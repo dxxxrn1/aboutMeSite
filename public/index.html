@@ -15,10 +15,12 @@
 
         .container{
             background-color: white;
-            width: 400px;
+            max-width: 500px;
             padding: 40px;
             border-radius: 20px;
             text-align: center;
+            width: 50%;
+            margin: 0 auto;
         }
         .profile-pic{
             width: 150px;
@@ -47,6 +49,7 @@
             margin-top: 20px;
             transition: background-color 0.2s; 
             text-decoration: none;
+           /* display: block;*/
         }
         .btn:hover{
             background-color: #4e5ac6;
@@ -63,6 +66,48 @@
             color: white;
             
         }
+        .project-link{
+            color: #204b90;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5%;
+            transition: all 0.3s ease;
+   
+
+        }
+        .project-link:hover{
+       
+            background-color: #bdc2f1;
+            color:#204b90;
+            cursor: pointer;
+            transform: scale(1.1)
+        }
+
+        .project-grid{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .project-card{
+            background-color: whitesmoke;
+            padding: 25px;
+            border-radius: 10%;
+            border: 1px solid grey;
+            flex: 1;
+            transition: all 0.3s ease;
+
+        }
+        .project-card:hover{
+
+            transform: scale(1.02);
+        }
+            
+        
+
     </style>
 </head>
 <body>
@@ -71,7 +116,7 @@
     <p>And welcome to my about me section on the internet</p>
     <img src ="instaPic.jpg" alt = "Profile picture" class = "profile-pic">
     <h2> About Me</h2>
-    <p> s
+    <p>
         I am a 2nd year BIT Student
         <br> I enjoy coding and making music
     </p>
@@ -81,6 +126,27 @@
         <li>Coding </li>
         <li>Playing Video Games</li>
     </ul>
+
+
+    <hr style ="border: 0; border-top: 1px solid #eee; margin: 30px ;">
+    <h2> Recent Projects</h2>
+    <div class= "project-grid">
+
+        <div class ="project-card">
+            <h3>Music production</h3>
+            <p>Creating beats using Fl studio</p>
+            <a href="" class = "project-link">Listen here</a>
+        </div>
+
+                <div class ="project-card">
+            <h3>Programing</h3>
+            <p>Creating real world program solutions</p>
+            <a href="" class = "project-link">Git Portfolio here</a>
+        </div>
+        
+
+
+    </div>
     <br><a href ="/email" class = "btn"> Contact Me</a>
     <footer>
         <hr style = "margin-top: 40px; border: none; border-top: 1px solid #ddd;">
