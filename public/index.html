@@ -8,10 +8,11 @@
     <style>
         body{
             display: flex;
+             flex-direction: column;
             font-family: arial, sans-serif;
             background-color: #4e5ac6;
-            justify-content: center;
             padding-top: 50px;
+           
         }
 
         .container{
@@ -68,6 +69,7 @@
             
         }
         .project-link{
+            margin-top: auto;
             color: #204b90;
             font-weight: bold;
             text-decoration: none;
@@ -75,16 +77,11 @@
             padding: 5px 10px;
             border-radius: 5%;
             transition: all 0.3s ease;
+
    
 
         }
-        .project-link:hover{
-       
-            background-color: #bdc2f1;
-            color:#204b90;
-            cursor: pointer;
-            transform: scale(1.1)
-        }
+
 
         .project-grid{
             display: flex;
@@ -92,32 +89,93 @@
             justify-content: center;
             margin-bottom: 20px;
             text-align: left;
+            align-items: stretch;
         }
         .project-card{
             background-color: whitesmoke;
-            padding: 25px;
-            border-radius: 10%;
+            padding: 20px;
+            border-radius: 15%;
             border: 1px solid grey;
             flex: 1;
             transition: all 0.3s ease;
+            max-width: 400px;
+            flex: 1 1 0;
 
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+
+        }
+
+        .project-card h3 {
+            margin-top: 0; /* Remove default margin from heading */
+        }
+
+        .project-card p {
+            flex-grow: 1; /* This pushes the link to the bottom */
         }
         .project-card:hover{
 
             transform: scale(1.02);
         }
-            
+        .navbar{
+            position: sticky;
+            top: 0;            
+            z-index: 1000;
+            /*layout */
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+
+            /*shape*/
+            background-color: #204b90;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+
+            width: fit-content;
+            margin:20px;
+     
+        }
+        .navbar a{
+ 
+           
+            background-color: #204b90;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 5px;
         
+            transition: all 0.3s ease;
+            text-decoration: none;
+            
+          
+    
+            
+        }
+        .navbar a:hover{
+            background-color: #9597fd;
+            cursor: pointer;
+            transform: scale(1.05)
+            
+        }
+            
+    
 
     </style>
 </head>
-<nav class="navbar">
+
+
+<body>
+    <nav class="navbar">
     <a href ="about">About</a>
     <a href="projects"> Projects</a>
     <a href="mailto:darrenforster3@gmail.com">Contact</a>
-</nav>
 
-<body>
+    </nav>
   <div class = "container">
     <h1> Hello im Darren!</h1>
     <p>And welcome to my about me section on the internet</p>
